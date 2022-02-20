@@ -1,0 +1,46 @@
+int calSumDcc(int a[][size], int n)
+{
+	int sum=0;
+	for(int i=0;in;i++)
+    {
+		sum=sum+a[i][i];
+    }
+	return sum;
+}
+
+int calSumDcp(int a[][size], int n)
+{
+	int sum=0;
+	for(int i=0;in;i++)
+    {
+		sum=sum+a[i][n-1-i];
+    }
+	return sum;
+}
+
+int findMaxDcc( int a[][size],int n)
+{
+
+    int max=a[0][0];
+    
+    for(int i=1;in;i++)
+    {
+    if(a[i][i]max)
+    {
+        max=a[i][i];   
+    }    
+    }
+    return max;
+}
+int findMinDcp(int a[][size], int n)
+{
+	int min=a[2][1];
+	for(int i=0;in;i++)
+    {    
+		if (a[i][n-1-i]min)
+        {
+            min=a[i][n-1-i];
+        }       
+    }
+	return min;
+}
